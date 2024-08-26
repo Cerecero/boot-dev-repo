@@ -1,25 +1,27 @@
 from main import *
 
-run_cases = [(0, 10, 20, 9), (0, 10, 4, 1), (8, 10, 20, 10)]
+run_cases = [
+    (2, 5, 30),
+    (3, 15, 120),
+    (4, 30, 300),
+]
 
 submit_cases = run_cases + [
-    (0, 0, 0, 0),
-    (9, 10, 3, 9),
-    (100, 100, 200, 100),
-    (2, 110, 50, 26),
-    (100, 1010, 2000, 1010),
+    (1, 0, 0),
+    (5, 50, 600),
+    (7, 105, 1680),
+    (10, 225, 4950),
+    (15, 525, 16800),
+    (20, 950, 39900),
 ]
 
 
-def test(input1, input2, input3, expected_output):
+def test(input1, input2, expected_output):
     print("---------------------------------")
-    print(f"Inputs:")
-    print(f" * current_health: {input1}")
-    print(f" *     max_health: {input2}")
-    print(f" * enemy_distance: {input3}")
-    print(f"Expecting: {expected_output}")
-    result = regenerate(input1, input2, input3)
-    print(f"   Actual: {result}")
+    print(f"Num attacks: {input1} Base damage: {input2}")
+    print(f"Expecting: {expected_output} damage")
+    result = calculate_flurry_crit(input1, input2)
+    print(f"Actual: {result} damage")
     if result == expected_output:
         print("Pass")
         return True
@@ -48,4 +50,3 @@ if "__RUN__" in globals():
     test_cases = run_cases
 
 main()
-

@@ -1,25 +1,27 @@
 from main import *
 
-run_cases = [(0, 10, 20, 9), (0, 10, 4, 1), (8, 10, 20, 10)]
+run_cases = [
+    (2, 5),
+    (3, 15),
+    (4, 30),
+]
 
 submit_cases = run_cases + [
-    (0, 0, 0, 0),
-    (9, 10, 3, 9),
-    (100, 100, 200, 100),
-    (2, 110, 50, 26),
-    (100, 1010, 2000, 1010),
+    (1, 0),
+    (5, 50),
+    (7, 105),
+    (10, 225),
+    (15, 525),
+    (20, 950),
 ]
 
 
-def test(input1, input2, input3, expected_output):
+def test(input1, expected_output):
     print("---------------------------------")
-    print(f"Inputs:")
-    print(f" * current_health: {input1}")
-    print(f" *     max_health: {input2}")
-    print(f" * enemy_distance: {input3}")
+    print(f"Inputs: {input1}")
     print(f"Expecting: {expected_output}")
-    result = regenerate(input1, input2, input3)
-    print(f"   Actual: {result}")
+    result = calculate_experience_points(input1)
+    print(f"Actual: {result}")
     if result == expected_output:
         print("Pass")
         return True

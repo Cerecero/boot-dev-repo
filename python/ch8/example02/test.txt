@@ -1,0 +1,14 @@
+ALTER USER Annette IDENTIFIED BY 'Annette';
+ALTER USER Warren IDENTIFIED BY 'Warren';
+ALTER USER Anthony IDENTIFIED BY 'Anthony';
+ALTER USER Preston IDENTIFIED BY 'Preston';
+ALTER USER Kelly IDENTIFIED BY 'Kelly';
+ALTER USER Taylor IDENTIFIED BY 'Taylor';
+ALTER USER Stiller IDENTIFIED BY 'Stiller';
+ALTER USER Dennis IDENTIFIED BY 'Dennis';
+ALTER USER Schwartz IDENTIFIED BY 'Schwartz';
+
+
+This was a test of the recording feature in vim using 'q' to start recording and 'a',
+
+to play again use '@'
