@@ -11,7 +11,7 @@ submit_cases = run_cases + [
 ]
 
 
-def test(input1, input2, input3, expected_output):
+def test1(input1, input2, input3, expected_output):
     print("---------------------------------")
     print(f"Inputs: {input1}, {input2}, {input3}")
     print(f"Expecting: {expected_output}")
@@ -28,7 +28,7 @@ def main():
     passed = 0
     failed = 0
     for test_case in test_cases:
-        correct = test(*test_case)
+        correct = test1(*test_case)
         if correct:
             passed += 1
         else:
@@ -45,4 +45,5 @@ if "__RUN__" in globals():
     test_cases = run_cases
 
 main()
+
 
