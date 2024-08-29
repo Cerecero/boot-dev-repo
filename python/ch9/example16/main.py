@@ -10,7 +10,7 @@ def filter_messages(messages):
                 counter += 1
             else:
                 non_bad_word.append(word)
-            sentence = " ".join(non_bad_word)
+        sentence = " ".join(non_bad_word)
         filter_words.append(sentence)
         dang_count.append(counter)
     return filter_words, dang_count
