@@ -1,28 +1,28 @@
 from main import *
 
 run_cases = [
-    ({"jackal": 4, "kobold": 3, "soldier": 10, "gremlin": 5}, "soldier"),
-    ({"jackal": 1, "kobold": 3, "soldier": 2, "gremlin": 5}, "gremlin"),
+    ([1, 1, 1, 2, 2, 2, 3], [1, 2], [3]),
+    ([1, 2, 2, 3, 4, 3, 4, 5, 6, 7, 8, 9, 9, 10], [1, 2, 2, 3, 4, 5, 6, 7, 8], [9, 10]),
 ]
 
 submit_cases = run_cases + [
-    ({"jackal": 2, "gremlin": 7}, "gremlin"),
-    ({"jackal": 3}, "jackal"),
-    ({}, None),
-    ({"jackal": 5, "kobold": 3, "soldier": 10, "gremlin": 5, "dragon": 20}, "dragon"),
-    ({"jackal": 5, "kobold": 3, "soldier": 2, "gremlin": 10, "dragon": 1}, "gremlin"),
+    ([], [], []),
+    ([1, 1, 1], [], [1]),
+    ([1, 2, 3, 4, 5], [1, 2, 3, 4, 5], []),
+    ([1, 1, 2, 2, 3, 3], [1, 2, 3], []),
+    ([1, 2, 3, 4, 5], [1, 2, 3], [4, 5]),
+    ([1, 2, 3, 4, 5], [1, 3, 5], [2, 4]),
 ]
 
 
-def test(input1, expected_output):
+def test(input1, input2, expected_output):
     print("---------------------------------")
-    print(f"Inputs: {input1}")
+    print(f"Inputs: first_ids = {input1}, second_ids = {input2}")
     print(f"Expecting: {expected_output}")
-    result = get_most_common_enemy(input1)
-    if result == "None":
-        print('Actual: "None"')
-    else:
-        print(f"Actual: {result}")
+    result = find_missing_ids(input1, input2)
+    if isinstance(result, list):
+        result = sorted(result)
+    print(f"Actual: {result}")
     if result == expected_output:
         print("Pass")
         return True
@@ -51,3 +51,4 @@ if "__RUN__" in globals():
     test_cases = run_cases
 
 main()
+
