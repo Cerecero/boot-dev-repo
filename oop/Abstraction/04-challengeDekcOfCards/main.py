@@ -24,8 +24,8 @@ class DeckOfCards:
         self.create_deck()
 
     def create_deck(self):
-        for suit in DeckOfCards.SUITS:
-            for rank in DeckOfCards.RANKS:
+        for suit in self.SUITS:
+            for rank in self.RANKS:
                 self.__cards.append((rank, suit))
                 # print(f"This is self.__cards: {self.__cards}")
 
