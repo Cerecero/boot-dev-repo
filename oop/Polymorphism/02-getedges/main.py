@@ -17,6 +17,9 @@ class Rectangle:
     def get_bottom_y(self):
         return min(self.__y1, self.__y2)
 
+    # min Return the smallest item in an iterable or the smallest of two or more arguments.
+    # max Return the largest item in an iterable or the smallest of two or more arguments.
+
     # don't touch below this line
 
     def __repr__(self):
