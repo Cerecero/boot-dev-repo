@@ -98,9 +98,12 @@ class BinarySearchTreeNode:
             elif self.right is None:
                 return self.left
 
-            min_val = self.right.find_min()
-            self.data = min_val
-            self.right = self.right.delete(min_val)
+            # min_val = self.right.find_min()
+            # self.data = min_val
+            # self.right = self.right.delete(min_val)
+            max_val = self.left.find_max()
+            self.data = max_val
+            self.left = self.left.delete(max_val)
         return self
 
 
@@ -115,5 +118,6 @@ def built_tree(elements):
 if __name__ == '__main__':
     numbers = [15, 12, 7, 14, 27, 20, 23, 88]
     numbers_tree = built_tree(numbers)
+    print(numbers_tree.in_order_traversal())
     numbers_tree.delete(20)
     print(f"this is athe list {numbers_tree.in_order_traversal()}")
