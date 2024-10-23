@@ -116,4 +116,4 @@ if __name__ == '__main__':
     numbers = [15, 12, 7, 14, 27, 20, 23, 88]
     numbers_tree = built_tree(numbers)
     numbers_tree.delete(20)
-    print(f"this is athe list {numbers}")
+    print(f"this is athe list {numbers_tree.in_order_traversal()}")
