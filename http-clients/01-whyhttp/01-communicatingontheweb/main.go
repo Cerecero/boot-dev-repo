@@ -13,6 +13,6 @@ func main() {
 
 	// Don't edit above this line
 
-	// ?
+	fmt.Printf(string(issues))
 }
 
